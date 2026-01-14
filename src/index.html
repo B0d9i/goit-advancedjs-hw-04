@@ -11,9 +11,32 @@
     <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <section class="search-section">
+        <div class="container">
+          <form class="search-form" id="search-form">
+            <input
+              type="text"
+              name="searchQuery"
+              autocomplete="off"
+              placeholder="Search images..."
+              class="search-input"
+            />
+            <button type="submit" class="search-button">Search</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <div class="container">
+          <ul class="gallery"></ul>
+          <div class="loader-wrapper">
+            <button type="button" class="load-more is-hidden">Load more</button>
+            <div class="loader is-hidden">
+              <span class="loader-spinner"></span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <load src="./partials/footer.html" />
